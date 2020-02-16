@@ -60,14 +60,14 @@ Mux16 (a=yANDx,  b=yADDx,  sel=f, out=outF);
 
 // no (Post-setting the output)
 Not16 (in=outF,out=NOToutF);
-Mux16 (a=outF, b=NOToutF, sel=no, out=nout);
+Mux16 (a=outF, b=NOToutF, sel=no, out=nout, out[0..7]=n5,out[8..15]=n6);
 
 //Xor(a=nout[15],b=true,out=n1);
 //Not(in=n1,out=ng);
 And16(a=true,b=nout,out[15]=ng,out[0..14]=drop);
 
-Or8Way(in=nout[0..7],out=n2);
-Or8Way(in=nout[8..15],out=n3);
+Or8Way(in=n5,out=n2);
+Or8Way(in=n6,out=n3);
 Or(a=n2,b=n3,out=n4);
 Not(in=n4,out=zr);
 
