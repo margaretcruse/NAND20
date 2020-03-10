@@ -13,7 +13,7 @@
 
 // Put your code here.
 
-(SCREEN)
+(START)
 @SCREEN
 D=A
 @R0
@@ -24,10 +24,10 @@ M=D
 D=M
 
 @FILL
-0;JNE
+D;JNE
 
 @CLEAR
-0;JEQ
+D;JEQ
 
 (FILL)
 @R1
@@ -47,5 +47,8 @@ D=M
 @R0
 A=M
 M=D
+
+@START
+0;JMP
 
 
