@@ -13,5 +13,39 @@
 
 // Put your code here.
 
+(SCREEN)
+@SCREEN
+D=A
+@R0
+M=D
+
+
 @KBD
+D=M
+
+@FILL
+0;JNE
+
+@CLEAR
+0;JEQ
+
+(FILL)
+@R1
+M=-1
+@UPDATE
+0;JMP
+
+(CLEAR)
+@R1
+M=0
+@UPDATE
+0;JMP
+
+(UPDATE)
+@R1
+D=M
+@R0
+A=M
+M=D
+
 
