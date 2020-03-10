@@ -14,12 +14,13 @@
 // Put your code here.
 
 (START)
+//access screen
 @SCREEN
 D=A
 @R0
 M=D
 
-
+//check kbd
 @KBD
 D=M
 
@@ -41,6 +42,7 @@ M=0
 @UPDATE
 0;JMP
 
+//assign color
 (UPDATE)
 @R1
 D=M
@@ -61,6 +63,7 @@ A=M
 @UPDATE
 D;JGT
 
+//restart
 @START
 0;JMP
 
