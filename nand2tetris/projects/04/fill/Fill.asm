@@ -44,9 +44,22 @@ M=0
 (UPDATE)
 @R1
 D=M
+
 @R0
 A=M
 M=D
+
+@R0
+D=M+1
+@KBD
+D=A-D
+
+@R0
+M=M+1
+A=M
+
+@UPDATE
+D;JGT
 
 @START
 0;JMP
